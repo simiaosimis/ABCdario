@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Escolha" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" >
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_jogar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="193dp"
+        android:layout_toLeftOf="@+id/relativeLayout1"
+        android:text="@string/jogar" />
+
+    <Button
+        android:id="@+id/button_aprender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_jogar"
+        android:layout_alignBottom="@+id/button_jogar"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="196dp"
+        android:text="@string/aprender" />
+
+</RelativeLayout>

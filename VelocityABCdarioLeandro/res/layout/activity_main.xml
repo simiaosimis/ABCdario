@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_main" >
+
+    <Button
+        android:id="@+id/button_iniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/iniciar" />
+
+    <TextView
+        android:id="@+id/ABCdario_titulo"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_iniciar"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:text="@string/abcdario"
+        android:textSize="50sp" />
+
+</RelativeLayout>
