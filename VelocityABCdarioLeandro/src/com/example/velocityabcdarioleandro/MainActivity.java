@@ -24,7 +24,7 @@ Button button_iniciar;
 				Intent trocatela = new
 				Intent(MainActivity.this,Escolha.class);
 				MainActivity.this.startActivity(trocatela);
-				MainActivity.this.finish();
+				
 				 
 				}
 		});

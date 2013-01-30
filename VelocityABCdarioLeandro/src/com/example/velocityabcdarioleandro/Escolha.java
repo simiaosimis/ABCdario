@@ -26,8 +26,7 @@ Button button_jogar, button_aprender;
 				Intent trocatela = new
 				Intent(Escolha.this,Jogar.class);
 				Escolha.this.startActivity(trocatela);
-				Escolha.this.finish();
-				 
+								 
 				}
 		});
 		
@@ -38,8 +37,7 @@ Button button_jogar, button_aprender;
 				Intent trocatela = new
 				Intent(Escolha.this,Aprender.class);
 				Escolha.this.startActivity(trocatela);
-				Escolha.this.finish();
-				 
+								 
 				}
 		});
 		
