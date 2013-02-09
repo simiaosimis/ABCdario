@@ -33,6 +33,7 @@ public class TesteABCVelocity extends
 		solo.clickOnButton("Jogar");
 		solo.assertCurrentActivity("Verifica tela jogo", Jogar.class);
 		solo.goBack();
+		solo.assertCurrentActivity("Verifica tela jogo", Escolha.class);
 		solo.clickOnButton("Aprender");
 		solo.assertCurrentActivity("Verifica tela aprender", Aprender.class);
 		solo.clickOnButton("B");
@@ -42,7 +43,7 @@ public class TesteABCVelocity extends
 		solo.clickOnButton("A");
 		solo.clickOnButton("X");
 		
-		
+				
 	}
 	
 }
