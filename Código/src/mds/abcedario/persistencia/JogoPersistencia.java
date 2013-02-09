@@ -10,10 +10,6 @@ public class JogoPersistencia {
 	//declaração de variável para instanciar o objeto JogoPersistencia
 	private static JogoPersistencia instance;
 	
-	//declaração de ArrayLists para armazenar objetos do tipo JogoModel
-	private ArrayList<JogoModel> cadastroLetra;
-	private ArrayList<JogoModel> cadastroNumero;
-	
 	//Padrão Singleton - Apenas uma instância
 	private JogoPersistencia(){}
 	
@@ -34,5 +30,19 @@ public class JogoPersistencia {
 	static JogoModel numero_1_04 = new JogoModel("1",R.drawable.num_1_04, R.drawable.bt_1 );
 	static JogoModel numero_1_05 = new JogoModel("1",R.drawable.num_1_05, R.drawable.bt_1 );
 	static JogoModel numero_1_06 = new JogoModel("1",R.drawable.num_1_06, R.drawable.bt_1 );
+	
+	//Declarando e Intanciando um ArrayList que conterá todos os objetos do tipo JogoModel relacionados aos números
+	static private ArrayList<JogoModel> cadastroNumero = new ArrayList<JogoModel>();
+	static private ArrayList<JogoModel> cadastroLetra = new ArrayList<JogoModel>();
+	
+	//Armazenando estaticamente
+	static{
+		cadastroNumero.add(numero_1_01);
+		cadastroNumero.add(numero_1_02);
+		cadastroNumero.add(numero_1_03);
+		cadastroNumero.add(numero_1_04);
+		cadastroNumero.add(numero_1_05);
+		cadastroNumero.add(numero_1_06);
+	}
 }
 
