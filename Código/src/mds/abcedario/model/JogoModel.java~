@@ -5,12 +5,10 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class JogoModel implements Serializable{
 
-	private String nome;
 	private int imagem;
 	private int botao;
 	
-	public JogoModel(String nome, int imagem, int botao){
-		setNome(nome);
+	public JogoModel(int imagem, int botao){
 		setImagem(imagem);
 		setBotao(botao);
 	}
@@ -30,14 +28,5 @@ public class JogoModel implements Serializable{
 	public void setBotao(int botao) {
 		this.botao = botao;
 	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 	
 }
-
