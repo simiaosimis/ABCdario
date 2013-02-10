@@ -45,6 +45,7 @@ public class InicioActivity extends Activity {
 			 
 			}
 		});
+		
 
 		bt_sobre.setOnClickListener(new View.OnClickListener(){			
 			
@@ -54,7 +55,7 @@ public class InicioActivity extends Activity {
 						context);
 
 					
-					alertDialogBuilder.setTitle("        Informativo");
+					alertDialogBuilder.setTitle("Informativo");
 					alertDialogBuilder		
 					
 						.setIcon(R.drawable.bt_sobre)		
@@ -67,8 +68,7 @@ public class InicioActivity extends Activity {
 							}
 							
 						});
-					AlertDialog popUpInformativo = alertDialogBuilder.create();
-					popUpInformativo.show();
+					
 					}
 				});
 
