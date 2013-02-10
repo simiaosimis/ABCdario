@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ABCedario</string>
-    <string name="nome_aplicativo">ABCedario</string>
-	<string name="versao_aplicativo">Versão 1.0</string>
-	<string name="tela_inicial">Menu Inicial</string>
-	<string name="tela_escolhe_modo">Escolher Modo</string>
-	<string name="tela_aux">Informações</string>
+    <string name="app_name">ABCDário</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+	<string name="desc_bt_iniciar">Botão iniciar</string>
+	<string name="desc_bt_sair">Botão sair</string>
+	<string name="desc_bt_informativo">Botão informativo</string>
+	<string name="desc_img_inicial">Imagem tela inicial</string>
+	<string name="desc_img_escolha">Imagem de escolha do menu principal</string>
+	<string name="desc_bt_inicial_123">Botão modo numérico</string>
+	<string name="desc_bt_inicial_abc">Botão modo alfabético</string>
+	<string name="desc_bt_a">Botão letra a</string>
+    <string name="desc_bt_b">Botão letra b</string>
+    <string name="desc_bt_c">Botão letra c</string>
+	<color name="vermelho">#FF0000</color>
+    
 </resources>
