@@ -42,7 +42,7 @@ public class TesteABCVelocity extends
 		solo.clickOnButton("E");
 		solo.clickOnButton("A");
 		solo.clickOnButton("X");
-		
+		solo.goBack();
 				
 	}
 	
