@@ -105,6 +105,62 @@ public class JogoPersistencia {
 	cadastroNumero.add(numero_1_05);
 	cadastroNumero.add(numero_1_06);
 	
+	cadastroNumero.add(numero_2_01);
+	cadastroNumero.add(numero_2_02);
+	cadastroNumero.add(numero_2_03);
+	cadastroNumero.add(numero_2_04);
+	cadastroNumero.add(numero_2_05);
+	cadastroNumero.add(numero_2_06);
+	
+	cadastroNumero.add(numero_3_01);
+	cadastroNumero.add(numero_3_02);
+	cadastroNumero.add(numero_3_03);
+	cadastroNumero.add(numero_3_04);
+	cadastroNumero.add(numero_3_05);
+	cadastroNumero.add(numero_3_06);
+	
+	cadastroNumero.add(numero_4_01);
+	cadastroNumero.add(numero_4_02);
+	cadastroNumero.add(numero_4_03);
+	cadastroNumero.add(numero_4_04);
+	cadastroNumero.add(numero_4_05);
+	cadastroNumero.add(numero_4_06);
+	
+	cadastroNumero.add(numero_5_01);
+	cadastroNumero.add(numero_5_02);
+	cadastroNumero.add(numero_5_03);
+	cadastroNumero.add(numero_5_04);
+	cadastroNumero.add(numero_5_05);
+	cadastroNumero.add(numero_5_06);
+	
+	cadastroNumero.add(numero_6_01);
+	cadastroNumero.add(numero_6_02);
+	cadastroNumero.add(numero_6_03);
+	cadastroNumero.add(numero_6_04);
+	cadastroNumero.add(numero_6_05);
+	cadastroNumero.add(numero_6_06);
+	
+	cadastroNumero.add(numero_7_01);
+	cadastroNumero.add(numero_7_02);
+	cadastroNumero.add(numero_7_03);
+	cadastroNumero.add(numero_7_04);
+	cadastroNumero.add(numero_7_05);
+	cadastroNumero.add(numero_7_06);
+	
+	cadastroNumero.add(numero_8_01);
+	cadastroNumero.add(numero_8_02);
+	cadastroNumero.add(numero_8_03);
+	cadastroNumero.add(numero_8_04);
+	cadastroNumero.add(numero_8_05);
+	cadastroNumero.add(numero_8_06);
+	
+	cadastroNumero.add(numero_9_01);
+	cadastroNumero.add(numero_9_02);
+	cadastroNumero.add(numero_9_03);
+	cadastroNumero.add(numero_9_04);
+	cadastroNumero.add(numero_9_05);
+	cadastroNumero.add(numero_9_06);
+	
 	//Armazenando no cadastroLetra
 	cadastroLetra.add(letra_a_01);
 	
