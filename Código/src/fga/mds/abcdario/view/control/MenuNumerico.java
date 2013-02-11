@@ -1,5 +1,0 @@
-package fga.mds.abcdario.view.control;
-
-public class MenuNumerico {
-
-}
