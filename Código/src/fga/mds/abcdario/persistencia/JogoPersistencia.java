@@ -31,7 +31,32 @@ public class JogoPersistencia {
 	public void atualizaCadastro(){
 		
 	//Declarando e instanciando os objetos do tipo JogoModel relacionados as letras
-	JogoModel letra_a_01 = new JogoModel("a", R.drawable.abelha, R.drawable.bt_a); 
+	JogoModel letra_a_01 = new JogoModel("a", R.drawable.letra_a_01, R.drawable.bt_a); 
+	JogoModel letra_b_01 = new JogoModel("b", R.drawable.letra_b_01, R.drawable.bt_b); 
+	JogoModel letra_c_01 = new JogoModel("c", R.drawable.letra_c_01, R.drawable.bt_c);
+	JogoModel letra_d_01 = new JogoModel("d", R.drawable.letra_d_01, R.drawable.bt_d); 
+	JogoModel letra_e_01 = new JogoModel("e", R.drawable.letra_e_01, R.drawable.bt_e); 
+	JogoModel letra_f_01 = new JogoModel("f", R.drawable.letra_f_01, R.drawable.bt_f); 
+	JogoModel letra_g_01 = new JogoModel("g", R.drawable.letra_g_01, R.drawable.bt_g); 
+	JogoModel letra_h_01 = new JogoModel("h", R.drawable.letra_h_01, R.drawable.bt_h); 
+	JogoModel letra_i_01 = new JogoModel("i", R.drawable.letra_i_01, R.drawable.bt_i); 
+	JogoModel letra_j_01 = new JogoModel("j", R.drawable.letra_j_01, R.drawable.bt_j); 
+	JogoModel letra_k_01 = new JogoModel("k", R.drawable.letra_k_01, R.drawable.bt_k); 
+	JogoModel letra_l_01 = new JogoModel("l", R.drawable.letra_l_01, R.drawable.bt_l); 
+	JogoModel letra_m_01 = new JogoModel("m", R.drawable.letra_m_01, R.drawable.bt_m); 
+	JogoModel letra_n_01 = new JogoModel("n", R.drawable.letra_n_01, R.drawable.bt_n); 
+	JogoModel letra_o_01 = new JogoModel("o", R.drawable.letra_o_01, R.drawable.bt_o); 
+	JogoModel letra_p_01 = new JogoModel("p", R.drawable.letra_p_01, R.drawable.bt_p); 
+	JogoModel letra_q_01 = new JogoModel("q", R.drawable.letra_q_01, R.drawable.bt_q); 
+	JogoModel letra_r_01 = new JogoModel("r", R.drawable.letra_r_01, R.drawable.bt_r); 
+	JogoModel letra_s_01 = new JogoModel("s", R.drawable.letra_s_01, R.drawable.bt_s); 
+	JogoModel letra_t_01 = new JogoModel("t", R.drawable.letra_t_01, R.drawable.bt_t); 
+	JogoModel letra_u_01 = new JogoModel("u", R.drawable.letra_u_01, R.drawable.bt_u); 
+	JogoModel letra_v_01 = new JogoModel("v", R.drawable.letra_v_01, R.drawable.bt_v); 
+	JogoModel letra_w_01 = new JogoModel("w", R.drawable.letra_w_01, R.drawable.bt_w); 
+	JogoModel letra_x_01 = new JogoModel("x", R.drawable.letra_x_01, R.drawable.bt_x); 
+	JogoModel letra_y_01 = new JogoModel("y", R.drawable.letra_y_01, R.drawable.bt_y); 
+	JogoModel letra_z_01 = new JogoModel("z", R.drawable.letra_z_01, R.drawable.bt_z); 
 	
 	//Declarando e instanciando os objetos do tipo JogoModel relacionados aos números
 	JogoModel numero_1_01 = new JogoModel("1",R.drawable.num_1_01, R.drawable.bt_1 );
