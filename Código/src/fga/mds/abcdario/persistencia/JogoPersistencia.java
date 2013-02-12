@@ -122,6 +122,34 @@ public class JogoPersistencia {
 	JogoModel numero_9_05 = new JogoModel("9",R.drawable.num_9_05, R.drawable.bt_9 );
 	JogoModel numero_9_06 = new JogoModel("9",R.drawable.num_9_06, R.drawable.bt_9 );
 	
+	//Armazenando no cadastroLetra
+	
+	cadastroLetra.add(letra_a_01);
+	cadastroLetra.add(letra_b_01);
+	cadastroLetra.add(letra_c_01);
+	cadastroLetra.add(letra_d_01);
+	cadastroLetra.add(letra_e_01);
+	cadastroLetra.add(letra_f_01);
+	cadastroLetra.add(letra_g_01);
+	cadastroLetra.add(letra_h_01);
+	cadastroLetra.add(letra_i_01);
+	cadastroLetra.add(letra_j_01);
+	cadastroLetra.add(letra_k_01);
+	cadastroLetra.add(letra_l_01);
+	cadastroLetra.add(letra_m_01);
+	cadastroLetra.add(letra_n_01);
+	cadastroLetra.add(letra_o_01);
+	cadastroLetra.add(letra_p_01);
+	cadastroLetra.add(letra_q_01);
+	cadastroLetra.add(letra_r_01);
+	cadastroLetra.add(letra_s_01);
+	cadastroLetra.add(letra_t_01);
+	cadastroLetra.add(letra_u_01);
+	cadastroLetra.add(letra_v_01);
+	cadastroLetra.add(letra_w_01);
+	cadastroLetra.add(letra_x_01);
+	cadastroLetra.add(letra_y_01);
+	cadastroLetra.add(letra_z_01);
 	//Armazenando no cadastroNumero
 	cadastroNumero.add(numero_1_01);
 	cadastroNumero.add(numero_1_02);
@@ -186,8 +214,6 @@ public class JogoPersistencia {
 	cadastroNumero.add(numero_9_05);
 	cadastroNumero.add(numero_9_06);
 	
-	//Armazenando no cadastroLetra
-	cadastroLetra.add(letra_a_01);
 	
 	}
 	
