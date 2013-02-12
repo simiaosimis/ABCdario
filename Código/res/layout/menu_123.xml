@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/escolha_123_fundo"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+imgV/bt_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:contentDescription="@string/bt_voltar"
+        android:src="@drawable/bt_voltar" />
+
+    <ImageView
+        android:id="@+imgV/espaco_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/img_espaco_central_vertical"
+ 		android:contentDescription="@string/espaco_vertical"/>
+  
+    <ImageView
+        android:id="@+imgV/bt_jogar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+imgV/espaco_vertical"
+        android:layout_toRightOf="@+imgV/espaco_vertical"
+        android:clickable="true"
+        android:contentDescription="@string/bt_jogar"
+        android:src="@drawable/bt_jogar" />
+    
+     <ImageView
+        android:id="@+imgV/bt_aprender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+imgV/espaco_vertical"
+        android:layout_toLeftOf="@+imgV/espaco_vertical"
+        android:clickable="true"
+        android:contentDescription="@string/bt_aprender"
+        android:src="@drawable/bt_aprender" />
+
+</RelativeLayout>
