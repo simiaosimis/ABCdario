@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ABCdario</string>
+	<string name="bt_voltar">Botão Voltar</string>
+	<string name="img_espaco_central_vertical">Espaço Vertical</string>
+	<string name="campo_acertos">Campo de Acertos</string>
+	<string name="campo_erros">Campo de Erros</string>
+	<string name="menu_settings">Menu Settings</string>
+	<string name="nenhum"></string>
+</resources>
