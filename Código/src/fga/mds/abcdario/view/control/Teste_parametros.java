@@ -1,42 +1,112 @@
 package fga.mds.abcdario.view.control;
 
+import fga.mds.abcdario.R;
+import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import fga.mds.abcdario.R;
+import android.widget.TextView;
 
-public class Teste_parametros extends Activity {
+public class Score_activity extends Activity {
+
+	// Declaração das variáveis, textView e Bundle.
 	
-	private ImageView bt_voltar;
-	@Override
+	private TextView campo_acertos;		// Campo que informa quantidade de acertos realizados no jogo.
+	private TextView campo_erros;  		// Campo que informa quantidade de erros realizados no jogo.
+	private ImageView estrelas;    		// Imagem de estrela que varia de acordo com a porcentagem de acertos realizados no jogo.
+	private ImageView bt_voltar;    	// Imagem utilizada como botão para retornar para tela anterior.
+	private Bundle params;				// Declaração de variável do tipo Bundle para manipulação de parâmetros.
+	private int qtd_acertos;			// Declaração de variável int para armazenar a quantidade de acertos realizados no jogo.
+	private int qtd_erros;				// Declaração de variável int para armazenar a quantidade de erros realizados no jogo.
+	private float porcentagemAcertos;	// Declaração de variável float para armazenar a procentagem de acertos.
+		
+	
 	protected void onCreate(Bundle savedInstanceState) {
-		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.teste_parametros_activity);
-		
-		bt_voltar = (ImageView) findViewById(R.id.bt_voltar);
-		
-		bt_voltar.setOnClickListener(new View.OnClickListener(){			
-			
-			
-			public void onClick(View v) {
+		setContentView(R.layout.score_activity); 		// Setando XML score_activity na Tela.
 				
-				Intent intent = new Intent(Teste_parametros.this, Score_activity.class);
-                Bundle params = new Bundle();
-                
-                
-                params.putInt("acertos" , 11);
-                params.putInt("erros" , 2);
-                intent.putExtras(params);
-                startActivity(intent);
-				
-						 
-			}
-		});
-		
-		
+		inicializarComponentes(); 						// Chamando função para iniciar os componentes de tela utilizando ID.
+		params = obterParametros();						// Obtendo os parametros que a activity de jogo passou para o Bundle. 
+		qtd_acertos = setandoNumerosAcertosTela(params);// Setando na tela, no campo de acertos a quantidade obtida.
+		qtd_erros = setandoNumerosErrosTela(params);	// Setando na tela, no campo de erros a quantidade obtida.
+		porcentagemAcertos = calculaPorcentagemAcertos(qtd_acertos, qtd_erros); // Calculando porcentagem de acertos.
+		definirImgEstrelas(porcentagemAcertos);			// Definindo quantidade de estrelas a ser exibida baseado na porcentagem de acertos.
+		definirEventos();								// Definindo evento do botão voltar.
+		}
+
+	private void inicializarComponentes() {
+		estrelas = (ImageView)findViewById(R.id.estrelas);
+		bt_voltar = (ImageView)findViewById(R.id.bt_voltar);
+		campo_acertos = (TextView)findViewById(R.id.campo_acertos);
+		campo_erros = (TextView)findViewById(R.id.campo_erros);
 	}
+	
+	private Bundle obterParametros() {		
+		Intent intent = getIntent();		
+		Bundle params = intent.getExtras();  
+		return params;				
+	}
+	
+	private int setandoNumerosAcertosTela(Bundle params) {
+		if(params!=null);
+		{   
+			int mostraacertos = params.getInt("acertos");
+			String acertos = Integer.toString(mostraacertos);
+			campo_acertos.setText(acertos);
+			return mostraacertos;
+		}	
+	}
+	
+	private int setandoNumerosErrosTela(Bundle params) {
+		if(params!=null);
+		{   
+			int mostraerros = params.getInt("erros");
+			String erros = Integer.toString(mostraerros);
+			campo_erros.setText(erros);
+			return mostraerros;
+		}		
+	}
+	
+	private float calculaPorcentagemAcertos(int qtd_acertos, int qtd_erros) {
+		float qtd_total = qtd_acertos + qtd_erros;
+		float porcentagem;		
+		porcentagem = 100*qtd_acertos/qtd_total;		
+		return porcentagem;				
+	}
+	
+	private void definirImgEstrelas(float porcentagemAcertos) {
+		
+		if (porcentagemAcertos == 0){
+			estrelas.setImageDrawable(getResources().getDrawable(R.drawable.img_0_estrelas));
+		}
+		if (porcentagemAcertos < 20 && porcentagemAcertos > 0 ){
+			estrelas.setImageDrawable(getResources().getDrawable(R.drawable.img_1_estrela));
+		}
+		if (porcentagemAcertos < 40 && porcentagemAcertos >= 20){
+			estrelas.setImageDrawable(getResources().getDrawable(R.drawable.img_2_estrelas));
+		}
+		if (porcentagemAcertos < 60 && porcentagemAcertos >= 40){
+			estrelas.setImageDrawable(getResources().getDrawable(R.drawable.img_3_estrelas));
+		}
+		if (porcentagemAcertos < 80 && porcentagemAcertos >= 60){
+			estrelas.setImageDrawable(getResources().getDrawable(R.drawable.img_4_estrelas));
+		}
+		if (porcentagemAcertos <= 100 && porcentagemAcertos >= 80){
+			estrelas.setImageDrawable(getResources().getDrawable(R.drawable.img_5_estrelas));
+		}
+	}
+	
+	private void definirEventos() {
+		bt_voltar.setOnClickListener(new View.OnClickListener(){			
+						
+			public void onClick(View v) {				
+				Intent intent = new Intent(Score_activity.this, Escolha.class);
+				startActivity(intent);
+				finish();        
+			}
+		});		
+	}
+
 
 }
