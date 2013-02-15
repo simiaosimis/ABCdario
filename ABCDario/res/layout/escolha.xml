@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/escolha_123_abc_fundo"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+imgV/espaco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal = "true"
+        android:layout_centerVertical = "true"
+        android:src="@drawable/img_espaco_central_horizontal"
+        android:contentDescription="@string/espaco" />
+
+    <ImageView
+        android:id="@+imgV/bt_abc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	android:layout_centerVertical="true"
+       	android:layout_centerHorizontal = "true"
+        android:layout_alignTop="@+imgV/espaco"
+        android:clickable="true"
+        android:src="@drawable/bt_abc" 
+        android:contentDescription="@string/bt_abc"/>
+    
+    <ImageView
+        android:id="@+imgV/bt_123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	android:layout_centerVertical="true"
+       	android:layout_centerHorizontal = "true"
+        android:layout_alignBottom="@+imgV/espaco"
+        android:clickable="true"
+        android:src="@drawable/bt_123" 
+        android:contentDescription="@string/bt_123"/>
+    
+    <ImageView
+         android:id="@+imgV/bt_voltar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:clickable="true"
+         android:contentDescription="@string/bt_voltar"
+         android:src="@drawable/bt_voltar" />
+
+</RelativeLayout>
