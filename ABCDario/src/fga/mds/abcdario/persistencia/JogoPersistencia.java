@@ -29,7 +29,7 @@ public class JogoPersistencia {
 	}
 	
 	//método cujo qual será sempre chamado para inicializar/atualizar o cadastro
-	public void atualizaCadastro(){
+	public int atualizaCadastro(){
 		
 		//Declarando e instanciando os objetos do tipo JogoModel relacionados as letras
 		JogoModel letra_a_01 = new JogoModel("a", R.drawable.letra_a_01, R.drawable.bt_a); 
@@ -356,9 +356,11 @@ public class JogoPersistencia {
 		cadastroNumero.add(numero_9_05);
 		cadastroNumero.add(numero_9_06);
 	
-		//Armazenando no cadastroLetra
-		cadastroLetra.add(letra_a_01);
-	
+		//verificação
+		if(cadastroLetra.isEmpty() || cadastroNumero.isEmpty())
+			return -1;
+		
+		return 0;
 	}
 	
 	//Função para retornar objeto do tipo JogoModel a partir do envio de um número desejada

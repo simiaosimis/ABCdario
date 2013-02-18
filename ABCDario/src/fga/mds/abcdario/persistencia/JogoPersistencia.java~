@@ -154,7 +154,6 @@ public class JogoPersistencia {
 		JogoModel numero_3_06 = new JogoModel("3",R.drawable.num_3_06, R.drawable.bt_3 );
 	
 		JogoModel numero_4_01 = new JogoModel("4",R.drawable.num_4_01, R.drawable.bt_4 );
-		JogoModel numero_4_02 = new JogoModel("4",R.drawable.num_4_02, R.drawable.bt_4 );
 		JogoModel numero_4_03 = new JogoModel("4",R.drawable.num_4_03, R.drawable.bt_4 );
 		JogoModel numero_4_04 = new JogoModel("4",R.drawable.num_4_04, R.drawable.bt_4 );
 		JogoModel numero_4_05 = new JogoModel("4",R.drawable.num_4_05, R.drawable.bt_4 );
@@ -317,7 +316,6 @@ public class JogoPersistencia {
 		cadastroNumero.add(numero_3_06);
 	
 		cadastroNumero.add(numero_4_01);
-		cadastroNumero.add(numero_4_02);
 		cadastroNumero.add(numero_4_03);
 		cadastroNumero.add(numero_4_04);
 		cadastroNumero.add(numero_4_05);
@@ -405,4 +403,3 @@ public class JogoPersistencia {
 		return null;
 	}
 }
-
