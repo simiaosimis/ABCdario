@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ABCDário</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+	<string name="desc_bt_iniciar">Botão iniciar</string>
+	<string name="desc_bt_sair">Botão sair</string>
+	<string name="desc_bt_informativo">Botão informativo</string>
+	<string name="desc_img_inicial">Imagem tela inicial</string>
+	<string name="desc_img_escolha">Imagem de escolha do menu principal</string>
+	<string name="desc_bt_inicial_123">Botão modo numérico</string>
+	<string name="desc_bt_inicial_abc">Botão modo alfabético</string>
+	<string name="desc_bt_a">Botão letra a</string>
+    <string name="desc_bt_b">Botão letra b</string>
+    <string name="desc_bt_c">Botão letra c</string>
+	<color name="vermelho">#FF0000</color>
+	
+	<string name="bt_voltar">Botao Voltar</string>
+    <string name="bt_iniciar">Botao Iniciar</string>
+    <string name="bt_sobre">Botao Sobre</string>
+	<string name="bt_sair">Botao Sair</string>
+	<string name="espaco">Espaco Central</string>
+	<string name="bt_abc">Abc Escolha</string>
+	<string name="bt_123">123 Escolha</string>
+	<string name="bt_aprender">Botao Aprender</string>
+	<string name="bt_jogar">Botao Jogar</string>
+	<string name="espaco_vertical">Espaco Vertical</string>
+	
+	<string name="img_espaco_central_vertical">Espaço Vertical</string>
+	<string name="campo_acertos">Campo de Acertos</string>
+	<string name="campo_erros">Campo de Erros</string>
+	<string name="nenhum">10</string>
+	<string name="estrelas_score">Estrelas relacionadas ao percentual de acertos</string>
+	
+</resources>

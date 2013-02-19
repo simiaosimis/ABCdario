@@ -1,0 +1,40 @@
+package fga.mds.abcdario.test;
+
+
+import com.jayway.android.robotium.solo.Solo;
+
+import fga.mds.abcdario.view.Escolha;
+import fga.mds.abcdario.view.Score_activity;
+import android.test.ActivityInstrumentationTestCase2;
+
+public class TesteScore extends
+		ActivityInstrumentationTestCase2<Score_activity> {
+
+	private Solo solo;		
+			
+	public TesteScore() {
+		super("fga.mds.abcdario", Score_activity.class);
+	}
+
+	protected void setUp() throws Exception {
+		super.setUp();
+		solo = new Solo(getInstrumentation(), getActivity());
+	}
+
+	public void teste3_Activity_Score(){
+			
+		solo.sleep(2000);
+		assertTrue(solo.getCurrentTextViews(null).size()==2);
+		assertTrue(solo.getCurrentImageViews(null).size()==3);		
+		solo.assertCurrentActivity("Testando se a activity atual é a de Score", Score_activity.class);
+		solo.clickOnImage(0);
+		solo.assertCurrentActivity("Testando se a activity foi alterada", Escolha.class);
+		
+		
+	}
+	
+	public void tearDown() throws Exception {
+		///CLOVER:FLUSH
+		super.tearDown();
+	}
+}
