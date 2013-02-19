@@ -1,0 +1,53 @@
+package com.example.android.notepad;
+
+
+/*
+import fga.mds.abcdario.view.Escolha;
+import fga.mds.abcdario.view.Escolha_modo_123;
+import fga.mds.abcdario.view.Escolha_modo_ABC;*/
+import com.example.android.notepad.InicioActivity;
+import com.jayway.android.robotium.solo.Solo;
+
+import android.test.ActivityInstrumentationTestCase2;
+
+public class TesteAceitacaoScore extends
+		ActivityInstrumentationTestCase2<InicioActivity> {
+
+	
+	private Solo solo;
+	
+	public TesteAceitacaoScore() {
+		super(InicioActivity.class );
+		// TODO Auto-generated constructor stub
+	}
+
+	protected void setUp() throws Exception {
+		super.setUp();
+		solo = new Solo(getInstrumentation(), getActivity());
+	}
+	
+	public void testeMenu(){
+				
+				solo.assertCurrentActivity("Verifica tela inicial", InicioActivity.class);	
+				solo.clickOnImage(2);	
+				solo.sleep(2000);
+				solo.assertCurrentActivity("Verifica tela escolha", Escolha.class);
+				solo.clickOnImage(1);	
+				solo.assertCurrentActivity("Verifica tela 123",Escolha_modo_123.class);
+				solo.clickOnImage(0);	/*
+				solo.assertCurrentActivity("Verifica tela escolha", Escolha.class);
+				solo.clickOnButton("Abc Escolha");
+				solo.assertCurrentActivity("Verifica tela aprender", Escolha_modo_ABC.class);
+				solo.clickOnButton("Botao Voltar");
+				solo.assertCurrentActivity("Verifica tela escolha", Escolha.class);
+				solo.clickOnButton("Botao Voltar");
+				solo.assertCurrentActivity("Verifica tela inicial", InicioActivity.class);	*/
+			}
+
+
+public void tearDown() throws Exception {
+    ///CLOVER:FLUSH
+    super.tearDown();
+}
+
+}
