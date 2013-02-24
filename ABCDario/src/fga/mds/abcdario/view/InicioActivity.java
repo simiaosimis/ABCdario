@@ -1,11 +1,9 @@
-package fga.mds.abcdario.view;
+package fga.mds.abcdario;
 
 import fga.mds.abcdario.R;
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
@@ -43,37 +41,18 @@ public class InicioActivity extends Activity {
 			
 			public void onClick(View arg0) {			 
 				System.exit(0);
+			 
 			}
 		});
 		
 
 		bt_sobre.setOnClickListener(new View.OnClickListener(){			
 			
-			
-			public void onClick(View arg0) {			 
-				AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-						context);
-
-					
-					alertDialogBuilder.setTitle("        Informativo");
-					alertDialogBuilder		
-					
-						.setIcon(R.drawable.bt_sobre)		
-						.setMessage("Informacoes")
-						.setCancelable(false)
-						.setNegativeButton("OK",new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog,int id) {
-								
-								dialog.cancel();
-							}
-							
-						});
-					AlertDialog popUpInformativo = alertDialogBuilder.create();
-					
-					popUpInformativo.show();
+					public void onClick(View arg0) {			 
+						startActivity(new Intent(InicioActivity.this, Sobre.class));
+								 
 					}
 				});
-
-}
-
-}
+	
+			}
+	}
