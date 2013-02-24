@@ -1,4 +1,4 @@
-package fga.mds.abcdario.test;
+package fga.mds.abcdario.view.test;
 
 import com.jayway.android.robotium.solo.Solo;
 
