@@ -1,4 +1,4 @@
-package fga.mds.abcdario.view;
+package fga.mds.abcdario;
 
 import fga.mds.abcdario.R;
 import android.content.Context;
