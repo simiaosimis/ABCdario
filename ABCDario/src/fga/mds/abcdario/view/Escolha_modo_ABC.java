@@ -1,4 +1,4 @@
-package fga.mds.abcdario.view;
+package fga.mds.abcdario;
 
 import fga.mds.abcdario.R;
 import android.os.Bundle;
@@ -54,7 +54,7 @@ public class Escolha_modo_ABC extends Activity {
 
 			public void onClick(View v) {
 
-				startActivity(new Intent(Escolha_modo_ABC.this, JogoLetra.class));
+				startActivity(new Intent(Escolha_modo_ABC.this, Jogar_ABC.class));
 			}
 
 		});
