@@ -12,12 +12,10 @@ import android.widget.ImageView;
 
 public class AprenderNumero extends Activity{
 
-private AprenderController controller;	
+	private AprenderController controller = new AprenderController();;	
 	
 	private ImageView bt_proximo, bt_anterior, bt_voltar, bt_som, imagem; 
 	private Intent it;
-	private Bundle params;
-	private String numero;
 	private int id[] = new int[2];
 	private MediaPlayer musica;
 	
@@ -26,13 +24,11 @@ private AprenderController controller;
         super.onCreate(savedInstanceState); 
         setContentView(R.layout.aprender); 	
         
-        inicializarComponentes(null);
+        inicializarComponentes(0,55);
         definirEventos();
     }
 
-	public void inicializarComponentes(String numero) {
-		
-		controller = new AprenderController();// Instanciando a controladora Aprender
+	public void inicializarComponentes(int acao, int posicao) {
 		
 		bt_proximo = (ImageView) findViewById(R.id.bt_proximo);
 		bt_anterior = (ImageView) findViewById(R.id.bt_anterior);
@@ -40,13 +36,19 @@ private AprenderController controller;
 		bt_som = (ImageView) findViewById(R.id.bt_som);
 		imagem = (ImageView) findViewById(R.id.imagem_selecionada);
 		
-		if(numero == null)
-			numero = obterParamentro();
+		if(posicao == 55){
+			posicao = obterParamentro();
+			controller.criandoPosicao(posicao);
+		}
 		
-		id = controller.definirNumero(numero);
+		posicao = controller.definirAcaoNumero(posicao, acao);
+		
+		id = controller.definirNumero(posicao);
 		
 		definirImagem(id[0]);
 		definirAudio(id[1]);
+		
+		controller.alterandoPosicao(posicao);
 	}
 
 	private void definirAudio(int id) {
@@ -57,14 +59,11 @@ private AprenderController controller;
 		imagem.setImageResource(id);
 	}
 
-	private String obterParamentro() {
+	private int obterParamentro() {
 		
 		it = getIntent();
-		params = it.getExtras();
 		
-		numero = params.getString("OK");
-		
-		return numero;
+		return it.getExtras().getInt("id");
 	}
 
 	public void definirEventos() {
@@ -73,7 +72,9 @@ private AprenderController controller;
 			
 			@Override
 			public void onClick(View v) {
+				
 				startActivity(new Intent(AprenderNumero.this, Aprender_123.class));
+				finish();
 			}
 		});
 		
@@ -90,7 +91,8 @@ private AprenderController controller;
 			@Override
 			public void onClick(View v) {
 				
-				//inicializarComponentes(letra+1);
+				int posicao = controller.retornandoPosicao();
+				inicializarComponentes(1,posicao);
 			}
 		});
 		
@@ -98,7 +100,9 @@ private AprenderController controller;
 			
 			@Override
 			public void onClick(View v) {
-				//inicializarComponentes();
+				
+				int posicao = controller.retornandoPosicao();
+				inicializarComponentes(2,posicao);
 			}
 		});
 	}
