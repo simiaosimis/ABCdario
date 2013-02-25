@@ -1,53 +1,66 @@
 package fga.mds.abcdario.view;
 
-import fga.mds.abcdario.R;
-import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.AdapterView.OnItemClickListener;
+import fga.mds.abcdario.R;
+import fga.mds.abcdario.view.superclasses.AbstractActivity;
 
+public class Aprender_ABC extends AbstractActivity{
 
-public class Aprender_ABC extends Activity {
+	private ImageView bt_voltar;
+	private GridView gridView;
+	private MediaPlayer musica;
+	
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.grade_letras);
+        
+        inicializarComponentes();
+        definirEventos();
+      }
+	
+	@Override
+	public void inicializarComponentes() {
+		bt_voltar = (ImageView) findViewById(R.id.bt_voltar);
+		gridView = (GridView) findViewById(R.id.aprender_grade);
+		   
+		//musica = MediaPlayer.create(this, R.raw.musica_tela_inicial);
+		//musica.start();
 		
-		private ImageView bt_voltar;
-	    public void onCreate(Bundle savedInstanceState) {
-	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.grade_letra);
-	 
-	       bt_voltar = (ImageView) findViewById(R.imgV.bt_voltar);
-	      
-	      
-	      bt_voltar.setOnClickListener(new View.OnClickListener(){
+        gridView.setAdapter(new GradeLetras(this));
+	}
+
+	@Override
+	public void definirEventos() {
+		bt_voltar.setOnClickListener(new View.OnClickListener(){
 	    	  
-	    	  public void onClick(View arg0) {			 
-	    		  System.exit(0);
+	    	  public void onClick(View arg0) {
+	    		  //musica.stop();
 	    		  
+	    		  startActivity(new Intent(Aprender_ABC.this, Escolha_modo_ABC.class));
+	    		  finish();
 	    	  }
 	      });
-	 
-	         GridView gridView = (GridView) findViewById(R.id.aprender_grade);
-	   
-	          // Instance of ImageAdapter Class
-	          gridView.setAdapter(new GradeLetras(this));
-	          
-	          gridView.setOnItemClickListener(new OnItemClickListener() {
-	             public void onItemClick(AdapterView<?> parent, View v,
-	                      int position, long id) {
-	   
-	                  // Sending image id to FullScreenActivity
-	                  Intent i = new Intent(getApplicationContext(), Letra.class);
-	                  // passing array index
-	                  i.putExtra("id", position);
-	                  startActivity(i);
-	              }
-	          });
-	      }
-	      
+		
+		gridView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v,
+                    int position, long id) {
+            	//musica.stop();
+                
+                Intent i = new Intent(getApplicationContext(), AprenderLetra.class);
+                
+                i.putExtra("id", position);
+                startActivity(i);
+            }
+        });
+	}
+
 }
-			
-			
-	    
