@@ -1,6 +1,7 @@
 package fga.mds.abcdario.view;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,11 +15,15 @@ public class Aprender_123 extends AbstractActivity{
 
 	private ImageView bt_voltar;
 	private GridView gridView;
+	private MediaPlayer musica;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grade_numeros); 
+        
+        inicializarComponentes();
+        definirEventos();
       }
 
 	@Override
@@ -26,6 +31,9 @@ public class Aprender_123 extends AbstractActivity{
 		
 		 bt_voltar = (ImageView) findViewById(R.id.bt_voltar);
 		 gridView = (GridView) findViewById(R.id.aprender_grade);
+		 
+		 //musica = MediaPlayer.create(this, R.raw.musica_tela_inicial);
+		 //musica.start();
 		 
 		 gridView.setAdapter(new GradeNumeros(this));
 	}
@@ -35,8 +43,11 @@ public class Aprender_123 extends AbstractActivity{
 		
 		bt_voltar.setOnClickListener(new View.OnClickListener(){
 	    	  
-	    	  public void onClick(View arg0) {			 
+	    	  public void onClick(View arg0) {
+	    		  //musica.stop();
+	    		  
 	    		  startActivity(new Intent(Aprender_123.this, Escolha_modo_123.class));
+	    		  finish();
 	    	  }
 	    });
 		
@@ -44,10 +55,10 @@ public class Aprender_123 extends AbstractActivity{
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
                     int position, long id) {
- 
-                // Sending image id to FullScreenActivity
+            	//musica.stop();
+                
                 Intent i = new Intent(getApplicationContext(), AprenderNumero.class);
-                // passing array index
+                
                 i.putExtra("id", position);
                 startActivity(i);
             }
