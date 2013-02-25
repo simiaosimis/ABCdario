@@ -4,20 +4,21 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk
-        android:minSdkVersion="7"
-        android:targetSdkVersion="16" />
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="8"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        
+        android:icon="@drawable/icone"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme" android:debuggable="false">
         
         <activity
-            android:name="fga.mds.abcdario.view.control.InicioActivity"
+            android:name="fga.mds.abcdario.view.InicioActivity"
             android:label="@string/app_name" 
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:launchMode="singleTask" android:clearTaskOnLaunch="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,23 +26,113 @@
             </intent-filter>
         </activity>
         
- 	 <activity
-            android:name="fga.mds.abcdario.Escolha"
+        <service android:enabled="true" android:name="fga.mds.abcdario.view.SomBackground" 
+            android:isolatedProcess="true"/>
+        
+        <activity
+            android:name="fga.mds.abcdario.view.Escolha"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="landscape"
+            android:finishOnTaskLaunch="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             ></activity>
          
           <activity
-            android:name="fga.mds.abcdario.Escolha_modo_123"
+            android:name="fga.mds.abcdario.view.Escolha_modo_123"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar"
+            android:finishOnTaskLaunch="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             ></activity>
          
           <activity
-            android:name="fga.mds.abcdario.Escolha_modo_ABC"
+            android:name="fga.mds.abcdario.view.Escolha_modo_ABC"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar"
+            android:finishOnTaskLaunch="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             ></activity>
-    </application> 
-       
+          
+          <activity
+            android:name="fga.mds.abcdario.view.JogoNumero"
+            android:label="@string/app_name"
+            android:finishOnTaskLaunch="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            ></activity>
+          
+			<activity
+            android:name="fga.mds.abcdario.view.JogoLetra"
+            android:label="@string/app_name"
+            android:finishOnTaskLaunch="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            ></activity>
+			
+			<activity
+            android:name="fga.mds.abcdario.view.Score"
+            android:label="@string/app_name" 
+            android:finishOnTaskLaunch="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        	</activity>
+        
+			
+			<activity  android:name="fga.mds.abcdario.view.Aprender_ABC"
+			android:label="@string/app_name"
+			android:finishOnTaskLaunch="true"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:screenOrientation="landscape">			    
+			</activity>
+				
+			<activity  android:name="fga.mds.abcdario.view.GradeLetras"
+			android:label="@string/app_name"
+			android:finishOnTaskLaunch="true"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:screenOrientation="landscape">				            
+			</activity>
+	        
+	        <activity  android:name="fga.mds.abcdario.view.AprenderLetra"
+			android:label="@string/app_name"
+			android:finishOnTaskLaunch="true"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:screenOrientation="landscape">
+	        </activity>
+	        
+	        
+	        <activity  android:name="fga.mds.abcdario.view.Aprender_123"
+			android:label="@string/app_name"
+			android:finishOnTaskLaunch="true"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:screenOrientation="landscape">			    
+			</activity>
+				
+			<activity  android:name="fga.mds.abcdario.view.GradeNumeros"
+			android:label="@string/app_name"
+			android:finishOnTaskLaunch="true"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:screenOrientation="landscape">				            
+			</activity>
+	        
+	        <activity  android:name="fga.mds.abcdario.view.AprenderNumero"
+			android:label="@string/app_name"
+			android:finishOnTaskLaunch="true"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:screenOrientation="landscape">
+	        </activity>
+	        
+	        <activity  android:name="fga.mds.abcdario.view.Sobre"
+			android:label="@string/app_name"
+			android:finishOnTaskLaunch="true"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:screenOrientation="landscape">
+	        </activity>
+	        
+
+          
+    </application>
+
 </manifest>
