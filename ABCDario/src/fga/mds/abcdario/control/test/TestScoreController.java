@@ -21,12 +21,72 @@ public class TestScoreController {
 	}
 
 	@Test
-	public void testDefinirImgEstrelas(){
+	public void testDefinirImgEstrelas5(){
 		ScoreController teste = new ScoreController();
 		int id;
 		
 		id = teste.definirImgEstrelas(100);
 		
 		assertEquals(R.drawable.img_5_estrelas, id);
+	}
+	
+	@Test
+	public void testDefinirImgEstrelas4(){
+		ScoreController teste = new ScoreController();
+		int id;
+		
+		id = teste.definirImgEstrelas(70);
+		
+		assertEquals(R.drawable.img_4_estrelas, id);
+	}
+	
+	@Test
+	public void testDefinirImgEstrelas3(){
+		ScoreController teste = new ScoreController();
+		int id;
+		
+		id = teste.definirImgEstrelas(50);
+		
+		assertEquals(R.drawable.img_3_estrelas, id);
+	}
+	
+	@Test
+	public void testDefinirImgEstrelas2(){
+		ScoreController teste = new ScoreController();
+		int id;
+		
+		id = teste.definirImgEstrelas(30);
+		
+		assertEquals(R.drawable.img_2_estrelas, id);
+	}
+	
+	@Test
+	public void testDefinirImgEstrelas1(){
+		ScoreController teste = new ScoreController();
+		int id;
+		
+		id = teste.definirImgEstrelas(15);
+		
+		assertEquals(R.drawable.img_1_estrela, id);
+	}
+	
+	@Test
+	public void testDefinirImgEstrelas0(){
+		ScoreController teste = new ScoreController();
+		int id;
+		
+		id = teste.definirImgEstrelas(0);
+		
+		assertEquals(R.drawable.img_0_estrelas, id);
+	}
+	
+	@Test
+	public void testDefinirImgEstrelas(){
+		ScoreController teste = new ScoreController();
+		int id;
+		
+		id = teste.definirImgEstrelas(-1);
+		
+		assertEquals(R.drawable.img_0_estrelas, id);
 	}
 }
